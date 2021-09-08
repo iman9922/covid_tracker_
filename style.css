@@ -1,0 +1,437 @@
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding: 0;
+    margin: 3px;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bolder
+}
+
+header h3 {
+    color: red;
+    text-align: center;
+    padding: 0px;
+    margin: 20px;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    color: white;
+}
+
+.totalCases,
+.activeCases,
+.recovered,
+.deaths {
+    width: 20%;
+    background-color: #1e1e1e;
+}
+
+.totalCases {
+    border-top: 3px solid gray;
+}
+
+.activeCases {
+    border-top: 3px solid blue;
+}
+
+.recovered {
+    border-top: 3px solid green;
+}
+
+.deaths {
+    border-top: 3px solid red;
+}
+
+.title-mostAfected,
+.title-regions {
+    font-size: 24px Roboto, sans-serif;
+    width: 80%;
+    height: fit-content;
+    margin-right: 5%;
+    color: white;
+}
+
+.firstSection i {
+    color: rgb(66, 66, 66);
+    float: right;
+    margin-top: 3%;
+    margin-right: 3%;
+    font-size: xx-large;
+}
+
+.span1 {
+    color: #bcbcbc;
+    margin-left: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.span2 {
+    color: #ff1e4a;
+    margin-left: 5px;
+}
+
+.span3 {
+    color: #ff1e4a;
+    font-size: .875rem;
+    font-weight: 400px;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571;
+    margin-left: 14px;
+}
+
+.span4 {
+    color: #3b81f7;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 14px;
+}
+
+h4 {
+    margin-left: 14px;
+}
+
+.span5 {
+    color: #00bf4a;
+}
+
+.span6 {
+    color: #bcbcbc;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 14px;
+}
+
+.cases {
+    margin-left: 14px;
+}
+
+.usa,
+.india,
+.brazil,
+.rusia {
+    background-color: #1e1e1e;
+    width: 20%;
+    border-top: 5px solid red;
+}
+
+.usa-img {
+    height: 15px;
+    width: 15px;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+.fourthSection {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    margin-top: 40px;
+    direction: ltr;
+}
+
+.dot,
+.red-dot,
+.green-dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.red-dot {
+    background-color: #FF1E4A;
+    margin-left: 3%;
+}
+
+.green-dot {
+    background-color: #00BF4A;
+}
+
+@media(max-width:767px) {
+    .totalCases,
+    .activeCases,
+    .recovered,
+    .deaths {
+        width: 40%;
+    }
+    .recovered,
+    .deaths {
+        margin-top: 5%;
+    }
+    .europe,
+    .amricas,
+    .asia,
+    .africa,
+    .ocainia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .usa,
+    .india,
+    .brazil,
+    .rusia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    hr {
+        margin-top: 90%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .totalCases,
+    .activeCases,
+    .recovered,
+    .deaths {
+        width: 40%;
+    }
+    .recovered,
+    .deaths {
+        margin-top: 5%;
+    }
+    .europe,
+    .amricas,
+    .asia,
+    .africa,
+    .ocainia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .usa,
+    .india,
+    .brazil,
+    .rusia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    hr {
+        margin-top: 90%;
+    }
+}
+
+hr {
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 90%;
+}
+
+@media(min-width:1200px) {
+    .totalCases,
+    .activeCases,
+    .recovered,
+    .deaths {
+        width: 40%;
+    }
+    .recovered,
+    .deaths {
+        margin-top: 5%;
+    }
+    .europe,
+    .amricas,
+    .asia,
+    .africa,
+    .ocainia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .usa,
+    .india,
+    .brazil,
+    .rusia {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    hr {
+        scroll-margin-bottom: 5%;
+    }
+}
+
+
+/*....................................................................*/
+
+body {
+    background-color: black;
+}
+
+.top_last_sec {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 2%;
+    width: 80%;
+    decoration: none;
+    outline: none;
+}
+
+input[type="text "]:focus {
+    background-color: black;
+}
+
+.search_form {
+    border-bottom: 1px solid rgb(95, 92, 92);
+}
+
+button {
+    background-color: black;
+    width: 15%;
+    padding: 2%;
+    border: none;
+}
+
+.right_last_sec {
+    width: 60%;
+    color: white;
+}
+
+.right_last_sec i {
+    width: 15%;
+    color: white;
+    float: right;
+}
+
+hr.hr_sec_line {
+    margin: 0 auto;
+    padding-top: 0px;
+    color: red;
+    border-bottom: #bcbcbc;
+}
+
+hr.upperTable_line {
+    width: 90%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+hr.hr_sec_line:active {
+    border-bottom: 2 px solid red;
+}
+
+.left_last_sec {
+    width: 30%;
+    color: aliceblue;
+}
+
+table {
+    border: none;
+    background-color: #1E1E1E;
+    border-spacing: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+th.table_th:hover {
+    color: white;
+}
+
+tr.table_rows:hover {
+    background-color: #727272;
+}
+
+th {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid rgb(95, 92, 92);
+    color: gray;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid rgb(95, 92, 92);
+    color: white;
+}
+
+table img {
+    width: 8%;
+    padding-right: 3px;
+}
+
+th {
+    width: 11%;
+    font-size: 15px;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    background-color: #1E1E1E;
+    color: rgb(246, 250, 253);
+}
+
+footer i {
+    color: rgb(246, 250, 253);
+    width: 50px;
+    margin-top: 5%;
+    padding-right: 0%;
+}
+
+.footer_content {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 68%;
+}
+
+footer select {
+    width: 12%;
+    outline: none !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1E1E1E;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+    color: aliceblue;
+    border: none;
+    decoration: none;
+}
+
+.developers {
+    background-color: #1E1E1E;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+}
+
+.developer_sentence {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.developer_sentence a {
+    color: #2196f3;
+    ;
+}
+
+
+/*....................................................................*/

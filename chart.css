@@ -1,0 +1,20 @@
+.secondSection {
+    background-color: #1e1e1e;
+    margin: 0 auto;
+    color: white;
+    width: 80%;
+}
+
+.secondSection h3 {
+    padding-top: 3%;
+    margin-left: 3%;
+}
+
+.canvas_header {
+    margin: 0 auto;
+}
+
+canvas {
+    width: 90%;
+    margin: 0 auto;
+}
