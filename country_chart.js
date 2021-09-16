@@ -1,7 +1,7 @@
 let confirmed_cases = [];
 
 function confirmed_data() {
-    fetch('https://covid-api.mmediagroup.fr/v1/history?country=Global&status=Confirmed').then(response => {
+    fetch('https://covid-api.mmediagroup.fr/v1/history?country=France&status=confirmed').then(response => {
         return response.json()
     }).then(data => {
         for (let i = 0; i <= 29; i++) {
@@ -19,7 +19,7 @@ let chart_duration = [];
 
 
 function recovered_data() {
-    fetch('https://covid-api.mmediagroup.fr/v1/history?country=Global&status=recovered').then(response => {
+    fetch('https://covid-api.mmediagroup.fr/v1/history?country=France&status=recovered').then(response => {
         return response.json()
     }).then(data => {
         for (let i = 0; i <= 29; i++) {
@@ -35,7 +35,7 @@ recovered_data()
 let death_cases = [];
 
 function death_data() {
-    fetch('https://covid-api.mmediagroup.fr/v1/history?country=Global&status=Deaths').then(response => {
+    fetch('https://covid-api.mmediagroup.fr/v1/history?country=France&status=deaths').then(response => {
         return response.json()
     }).then(data => {
         for (let i = 0; i <= 29; i++) {

@@ -5,22 +5,22 @@ const continents = ["Europe", "Oceania", "Africa", "Asia"
 function total(continent, administered, partiallyVaccinated, vaccinated, population) { document.querySelector(".thirdSection").insertAdjacentHTML("afterbegin", `
 <div class="continent">
     <h1>${continent}</h1>
-    <h4>
-        Total Population:
-        <p>${population.toLocaleString()}</p>
-    </h4>
-    <h4>
-        Total Administered:
-        <p>${administered.toLocaleString()}</p>
-    </h4>
-    <h4>
-        Total Partially Vaccinated:
-        <p>${partiallyVaccinated.toLocaleString()}</p>
-    </h4>
-    <h4>
-        Total Vaccinated:
-        <p>${vaccinated.toLocaleString()}</p>
-    </h4>
+    <p>
+    POPULATION:<br>
+        <span id="all_pop">${population.toLocaleString()}</span>
+    </p>
+    <p>
+    Vaccine Registrated:
+        <span>${administered.toLocaleString()}</span>
+    </p>
+    <p>
+    Partially Vaccinated:
+        <span>${partiallyVaccinated.toLocaleString()}</span>
+    </p>
+    <p>
+    Total Vaccinated:
+        <span id="all_vaccinated">${vaccinated.toLocaleString()}</span>
+    </p>
 </div>
 `) }
 
@@ -49,22 +49,22 @@ getData();
 function totalUSA(administered, partiallyVaccinated, vaccinated, population) { document.querySelector(".thirdSection").insertAdjacentHTML("afterbegin", `
 <div class="continent">
     <h1>Americas</h1>
-    <h4>
-        Total Population:
-        <p>${population.toLocaleString()}</p>
-    </h4>
-    <h4>
-        Total Administered:
-        <p>${administered.toLocaleString()}</p>
-    </h4>
-    <h4>
-        Total Partially Vaccinated:
-        <p>${partiallyVaccinated.toLocaleString()}</p>
-    </h4>
-    <h4>
+    <p>
+        POPULATION:<br>
+        <span id="all_pop">${population.toLocaleString()}</span>
+    </p>
+    <p>
+    Vaccine Registrated:
+        <span>${administered.toLocaleString()}</span>
+    </p>
+    <p>
+         Partially Vaccinated:
+        <span>${partiallyVaccinated.toLocaleString()}</span>
+    </p>
+    <p>
         Total Vaccinated:
-        <p>${vaccinated.toLocaleString()}</p>
-    </h4>
+        <span id="all_vaccinated">${vaccinated.toLocaleString()}</span>
+    </p>
 </div>
 `) }
 
@@ -77,7 +77,6 @@ function getDataUSA() {
         let partiallyVaccinated = 0;
         let vaccinated = 0;
         let population = 0;
-        //console.log(USAnums[0].people_partially_vaccinated)
         administered = USAnums[0].administered;
         partiallyVaccinated = USAnums[0].people_partially_vaccinated;
         vaccinated = USAnums[0].people_vaccinated;

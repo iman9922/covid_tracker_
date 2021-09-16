@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="forth_sec.css" />
+    <link rel="stylesheet" href="table.css" />
     <link rel="stylesheet" href="chart.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="all.css" />
@@ -19,34 +20,10 @@
     <!-------------------------------------------------------->
     <header>
         <h1>GLOBAL</h1>
-        <h3>Affected Counties:222</h3>
+        <h3>Affected Countries: <span></span><span id="num_affected"></span></h3>
     </header>
     <section class="firstSection">
-        <div class="totalCases">
-            <i class=" fas fa-globe-americas theme--dark" style="color: #bcbcbc;"></i>
-            <h4>Total cases</h4>
-            <p><span class=" span1 ">235,485,584</span><span class="span2 "> +545,985 </span></p>
-            <p><span class="span3 ">25,854 per million .</span>
-                <span class="span4 ">165,2558 tested</span></p>
-        </div>
-        <div class="activeCases ">
-            <i class="fas fa-head-side-mask " style="color: #3b81f7; "></i>
-            <h4>Active cases</h4>
-            <p><span class="span1 ">235,485,584</span><span class="span5 "> -13,854 </span></p>
-            <p><span class="span3 ">25,854 165,2558 in critical conditions</span></p>
-        </div>
-        <div class="recovered ">
-            <i class="fas fa-heart " style="color: green; "></i>
-            <h4>Recovered</h4>
-            <p><span class="span1 ">187,156,476 </span><span style="color: green; ">+117,080</span>
-                <br><br><span class="span5 "> 90% recovered </span></p>
-        </div>
-        <div class="deaths ">
-            <i class="fas fa-skull-crossbones " style="color:#ff1e4a ; "></i>
-            <h4>Deaths</h4>
-            <p><span class="span1 ">235,485,584</span><span class="span2 "> +545,985 </span></p>
-            <p><span class="span3 ">562.6 per million</span></p>
-        </div>
+
     </section>
     <br>
     <br>
@@ -54,55 +31,31 @@
         <div class="canvas_header">
             <h3>Linear</h3>
 
+            <div class="chart_legend">
+                <button class="items" id="total" onclick="toggleData(0)"></button> Total cases <button class="items " id="recovered" onclick="toggleData(0)"></button>Recovered <button class="items " id="deaths" onclick="toggleData(0)"></button>Deaths
+            </div>
         </div>
+
 
         <canvas id="myChart"></canvas>
 
 
     </section>
     <hr>
-    <h1 class="title-regions "><span class="dot "></span> VACCINATION</h1>
-    <section class="thirdSection ">
+    <h1 class="title_vaccination_regions "><span class="dot"></span> VACCINATION</h1>
+    <section class="thirdSection">
 
     </section>
     <div>
         <hr>
         <h1 class="title-mostAfected "><span class="red-dot "></span> Most Affected Countries</h1>
     </div>
-    <section class="fourthSection ">
-        <div class="usa ">
-            <h1><img src="usa.png " class="usa-img "> usa</h1>
-            <p><span class="span6 ">cases</p>
-            <p><span class="span1 "> 53,534 </span><span class="span2 ">+9,798</span></p>
-            <p><span class="span6 "> 3,916 active.</span><span class="span2 ">3% of world total cases</span> </p>
-        </div>
-        <div class="india ">
-            <h1><img src="usa.png " class="usa-img "> usa</h1>
-            <p><span class="span6 ">cases</p>
-          <p><span class="span1 "> 53,534 </span><span class="span2 ">+9,798</span></p>
-            <p><span class="span6 "> 3,916 active.</span><span class="span2 ">3% of world total cases</span> </p>
-        </div>
-        <div class="brazil ">
-            <h1><img src="usa.png " class="usa-img "> usa</h1>
-            <p><span class="span6 ">cases</p>
-            <p><span class="span1 "> 53,534 </span><span class="span2 ">+9,798</span></p>
-            <p><span class="span6 "> 3,916 active.</span><span class="span2 ">3% of world total cases</span> </p>
-        </div>
-        <div class="rusia ">
-            <h1><img src="usa.png " class="usa-img "> usa</h1>
-            <p><span class="span6 ">cases</p>
-            <p><span class="span1 "> 53,534 </span><span class="span2 ">+9,798</span></p>
-            <p><span class="span6 "> 3,916 active.</span><span class="span2 ">3% of world total cases</span> </p>
-        </div>
-    </section>
+    <section class="forthsection"></section>
 
-    <!------------------  <div class="right_last_sec ">
 
-                <input placeholder="Search ">
-                <i class="fas fa-search "></i>
-            </div>
 
-        </div>---- </i>----------- <hr class="hr_sec_line ">---------********-------------------------------->
+
+    <!------------------------------------------------------->
 
     <section class="lastSection ">
         <hr class="upperTable_line ">
@@ -114,140 +67,30 @@
 
             <!--------------------------------------------------------->
             <div class="right_last_sec ">
-                <form class="search_form ">
-                    <input type="text " placeholder="Search.. " name="search">
-                    <button type="submit "><i class="fas fa-search "></i></button>
+                <form class="search_form " id="myForm">
+                    <input type="text" id="myInput" placeholder="Search for country....">
+                    <button type="submit " id="submit" disabled="true">  <i class="fas fa-search "></i></button>
                 </form>
             </div>
 
-            <!--------------------------------------------------------->
+            <!----------------------    ----------------------------------->
 
 
         </div>
-
-
         <table style="overflow-x:auto; " id="example ">
             <tr>
-                <th>Country</th>
+                <th id="country_name">Country</th>
+                <th class="table_th ">Population</th>
                 <th class="table_th ">Cases</th>
-                <th class="table_th ">Cases per million</th>
-                <th class="table_th ">Critical</th>
                 <th class="table_th ">Recovered</th>
-                <th class="table_th ">Deaths</th>
-                <th class="table_th ">Deaths per million</th>
-                <th class="table_th ">Tests</th>
-                <th class="table_th ">Tests per million</th>
+                <th class="table_th ">Death </th>
+                <th class="table_th ">Death Per Million</th>
+
+                <th class="table_th "> All Registerd Vaccination</th>
+                <th class="table_th ">Partially Vaccinated</th>
+                <th class="table_th ">Total Vaccinated</th>
             </tr>
-            <tr class="table_rows ">
-                <td><img src="usa.png " />USA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">INDIA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">EUROPE</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">CANADA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">RUSSIA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">AFRICA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">AFRICA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">AFRICA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">AFRICA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
-            <tr class="table_rows ">
-                <td> <img src="usa.png ">AFRICA</td>
-                <td>5465856</td>
-                <td>64846541</td>
-                <td>4652222</td>
-                <td>54541</td>
-                <td>56598</td>
-                <td>54564</td>
-                <td>8465465</td>
-                <td>54566</td>
-            </tr>
+
 
         </table>
     </section>
@@ -255,19 +98,23 @@
 
     <footer style="overflow-x:auto; ">
         <div class="footer_content ">
-            <span> <p> Rows per page: </p></span><select name=" " id=" ">
-          <option value="5 ">5</option>
-          <option value="10 ">10</option>
-          <option value="15 ">15</option>
-          <option value="ALL ">ALL</option>
-        </select>
+            <span> <p> Rows per page: </p></span>
+            <select name=" " class="select">
+      <option value="10" class="vals">10</option>
+      <option value="20" class="vals">20</option>
+      <option value="50" class="vals">50</option>
+     
+     
+    </select>
 
-            <span>   <p id="foot_p ">1-10 of 222 </p></span>
-            <i class="fas fa-angle-left "></i>
-            <i class="fas fa-angle-right "></i>
+            <span>   <p id="foot_p"> 1 -<span class="show_nums"></span> of 165 </p>
+            </span>
+            <i id="left_i" class="fas fa-angle-left "></i>
+            <i id="right_i" class="fas fa-angle-right "></i>
         </div>
 
     </footer>
+
 
 
     <div class="developers ">
@@ -278,6 +125,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="Chart.js"></script>
     <script src="vaccination.js"></script>
+    <script src="table.js"></script>
+    <script src="firstsec.js"></script>
+    <script src="forth_sec.js"></script>
+
 </body>
 
 </html>
