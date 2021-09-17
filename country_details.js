@@ -1,5 +1,3 @@
-let information = {};
-let info = {};
 let active = 0;
 let deaths = 0;
 let recovered = 0;
@@ -8,13 +6,18 @@ let deathsPerOneMillion = 0;
 let casesPerOneMillion = 0;
 let critical = 0;
 let population = 0;
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString);
+const country = urlParams.get('country');
+let country_name = document.getElementById('country_name');
+//let country_num_pop = document.getElementById('country_num_pop');
 
 function getCountries() {
-    fetch(
-            `https://coronavirus-19-api.herokuapp.com/countries/France`
-        )
+    fetch(`https://coronavirus-19-api.herokuapp.com/countries/${country}`)
         .then((res) => res.json())
         .then((data) => {
+            country_name.innerHTML = `${data.country}`
+                //country_num_pop.innerHTML = `${data.population}`
 
             active = data.active;
             console.log(data);
@@ -33,7 +36,7 @@ getCountries();
 
 async function renderAffectedCountries() {
     document.querySelector(".firstSection").innerHTML = `<div class="totalCases">
-    <i class=" fas fa-globe-americas theme--dark" style="color: #bcbcbc;"></i>
+       <i class=" fas fa-globe-americas theme--dark" style="color: #bcbcbc;"></i>
     <h4>Total cases</h4>
     <p><span class=" span1 ">${ totalcases.toLocaleString()}</span></p>
     <p><span class="span3 ">${casesPerOneMillion.toLocaleString()} per million .</span>
@@ -57,6 +60,4 @@ async function renderAffectedCountries() {
     <p><span class="span1 ">${deaths.toLocaleString()}</span></p>
     <p><span class="span3 ">${deathsPerOneMillion.toLocaleString()} Per million.</span></p>
 </div>`
-
-
 }

@@ -54,7 +54,7 @@ function listItems(data, filteredCountries, num = number) {
         const { confirmed, deaths } = cases[countries[i]].All;
         const valid_data = [abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population, confirmed, deaths].map(info => info ? info : "-")
         table_data(...valid_data);
-        // console.log(filteredCountries)
+        // searching_function(searching_data)
     }
 }
 let RECOVERD = [];
@@ -63,15 +63,17 @@ let DEATH_MILION = [];
 
 
 function table_data(abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population, confirmed, deaths) {
+
+    //table.insertAdjacentHTML = "";
     table.insertAdjacentHTML("beforeend", `
     
    
-<tr class="table_rows ">
+<tr class="table_rows" onclick="goSite('${country}')">
 <td><img class="flags"src="https://lipis.github.io/flag-icon-css/flags/4x3/${abbreviation.toLowerCase()}.svg"><span class="country_name">${country}</span></td>
 <td>${population.toLocaleString()}</td>
 <td>${confirmed.toLocaleString()}</td>
 <td>${RECOVERD}</td>
-<td>${ deaths}</td>
+<td>${deaths}</td>
 <td>${DEATH_MILION }</td>
 <td>${administered.toLocaleString()}</td>
 <td>${people_partially_vaccinated.toLocaleString() }</td>
@@ -79,6 +81,10 @@ function table_data(abbreviation, administered, country, people_partially_vaccin
 </tr>
 `)
 
+}
+
+function goSite(country) {
+    window.location.href = window.location.origin + '/country_details.html?country=' + country;
 }
 table_information(number)
 
