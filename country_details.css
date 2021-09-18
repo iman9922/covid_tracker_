@@ -1,0 +1,202 @@
+    body {
+        background-color: #121212;
+    }
+    
+    .secondSection {
+        background-color: #1e1e1e;
+        margin: 0 auto;
+        color: white;
+        width: 80%;
+    }
+    
+    .firstSection i {
+        color: rgb(66, 66, 66);
+        float: right;
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: xx-large;
+    }
+    
+    .secondSection h3 {
+        padding-top: 3%;
+        margin-left: 3%;
+    }
+    
+    .canvas_header {
+        margin: 0 auto;
+    }
+    
+    canvas {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .chart_legend {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .items {
+        border-radius: 50%;
+        width: 1px;
+        height: 1px;
+        padding: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    header h3 {
+        color: #9e9e9e;
+        text-align: center;
+        padding: 0px;
+        margin: 20px;
+    }
+    
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        width: 100%;
+        color: white;
+    }
+    
+    .totalCases,
+    .activeCases,
+    .recovered,
+    .deaths {
+        width: 20%;
+        background-color: #1e1e1e;
+    }
+    
+    .firstSection i {
+        color: rgb(66, 66, 66);
+        float: right;
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: xx-large;
+    }
+    
+    .totalCases {
+        border-top: 3px solid gray;
+    }
+    
+    .activeCases {
+        border-top: 3px solid blue;
+    }
+    
+    .recovered {
+        border-top: 3px solid green;
+    }
+    
+    .deaths {
+        border-top: 3px solid red;
+    }
+    
+    .span1 {
+        color: #bcbcbc;
+        margin-left: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+    }
+    
+    .span2 {
+        color: #ff1e4a;
+        margin-left: 5px;
+    }
+    
+    .span3 {
+        color: #ff1e4a;
+        font-size: 20px;
+        font-weight: 400px;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571;
+        margin-left: 14px;
+    }
+    
+    .span4 {
+        color: #3b81f7;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 14px;
+    }
+    
+    h4 {
+        margin-left: 14px;
+    }
+    
+    .span5 {
+        color: #00bf4a;
+        font-size: 20px;
+        font-weight: 400px;
+        line-height: 1.375rem;
+        letter-spacing: .0071428571;
+        margin-left: 14px;
+    }
+    
+    .span6 {
+        color: #bcbcbc;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 14px;
+    }
+    
+    .cases {
+        margin-left: 14px;
+    }
+    
+    #population_h,
+    #nums_population,
+    #header_h1 {
+        color: black
+    }
+    
+    .developers {
+        background-color: #1E1E1E;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        margin-top: 5%;
+    }
+    
+    .developer_sentence {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    
+    .developer_sentence a {
+        color: #2196f3;
+        ;
+    }
+    
+    #header_title {
+        display: flex;
+        flex-flow: row;
+        text-align: center;
+        margin: 0 auto;
+        width: 10%;
+        padding-right: 200px;
+    }
+    
+    #country_image {
+        width: 50px;
+        border-radius: 100%;
+        margin: 0 auto;
+        padding-right: 10px;
+    }
+    
+    #country_name {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        padding: 0 auto;
+        margin: 0 auto;
+        width: 60%;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column;
+    }

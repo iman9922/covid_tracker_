@@ -1,0 +1,36 @@
+        .secondSection {
+            background-color: #1e1e1e;
+            margin: 0 auto;
+            color: white;
+            width: 80%;
+        }
+        
+        .secondSection h3 {
+            padding-top: 3%;
+            margin-left: 3%;
+        }
+        
+        .canvas_header {
+            margin: 0 auto;
+        }
+        
+        canvas {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .chart_legend {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .items {
+            border-radius: 50%;
+            width: 1px;
+            height: 1px;
+            padding: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }

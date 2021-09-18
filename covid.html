@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="forth_sec.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="chart.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="all.min.css" />
+
+    <link rel="stylesheet" href="vaccination.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 tracker</title>
+</head>
+
+
+<body>
+    <!-------------------------------------------------------->
+    <header>
+        <h1>GLOBAL</h1>
+        <h3>Affected Countries: <span></span><span id="num_affected"></span></h3>
+    </header>
+    <section class="firstSection">
+
+    </section>
+    <br>
+    <br>
+    <section class="secondSection ">
+        <div class="canvas_header">
+            <h3>Linear</h3>
+
+            <div class="chart_legend">
+                <button class="items" id="total" onclick="toggleData(0)"></button> Total cases <button class="items " id="recovered" onclick="toggleData(0)"></button>Recovered <button class="items " id="deaths" onclick="toggleData(0)"></button>Deaths
+            </div>
+        </div>
+
+
+        <canvas id="myChart" width="600" height="250"></canvas>
+
+
+    </section>
+    <hr>
+    <h1 class="title_vaccination_regions "><span class="dot"></span> VACCINATION</h1>
+    <section class="thirdSection">
+
+    </section>
+    <div>
+        <hr>
+        <h1 class="title-mostAfected "><span class="red-dot "></span> Most Affected Countries</h1>
+    </div>
+    <section class="forthsection"></section>
+
+
+
+
+    <!------------------------------------------------------->
+
+    <section class="lastSection ">
+        <hr class="upperTable_line ">
+        <div class="top_last_sec ">
+
+            <div class="left_last_sec ">
+                <h1>ALL COUNTRIES</h1>
+            </div>
+
+            <!--------------------------------------------------------->
+            <div class="right_last_sec ">
+                <form class="search_form " id="myForm">
+                    <input type="text" id="myInput" placeholder="Search for country....">
+                    <button type="submit " id="submit" disabled="true">  <i class="fas fa-search "></i></button>
+                </form>
+            </div>
+
+            <!----------------------    ----------------------------------->
+
+
+        </div>
+        <table style="overflow-x:auto; " id="example ">
+            <tr>
+                <th id="country_name">Country</th>
+                <th class="table_th ">Population</th>
+                <th class="table_th ">Cases</th>
+                <th class="table_th ">Cases Percentage</th>
+                <th class="table_th ">Death </th>
+                <th class="table_th ">Death Percentage</th>
+
+                <th class="table_th "> All Registerd Vaccination</th>
+                <th class="table_th ">Partially Vaccinated</th>
+                <th class="table_th ">Total Vaccinated</th>
+            </tr>
+
+
+        </table>
+    </section>
+
+
+    <footer style="overflow-x:auto; ">
+        <div class="footer_content ">
+            <span> <p> Rows per page: </p></span>
+            <select name=" " class="select">
+      <option value="10" class="vals active">10</option>
+      <option value="20" class="vals active">20</option>
+      <option value="50" class="vals active">50</option>
+     
+     
+    </select>
+
+            <span>   <p id="foot_p"> 1 -<span class="show_nums"></span> of 165 </p>
+            </span>
+
+            <i id="left_i" class="fas fa-angle-left "></i>
+            <i id="right_i" class="fas fa-angle-right "></i>
+        </div>
+
+    </footer>
+
+
+
+    <div class="developers ">
+        <h3 class="developer_sentence ">
+            2021-Developed by <a href="https://github.com/ " target="_blank "> IMAN </a> & <a href="https://github.com/Wesal21 " target="_blank ">WESAL</a>
+        </h3>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="Chart.js"></script>
+    <script src="vaccination.js"></script>
+    <script src="table.js"></script>
+    <script src="firstsec.js"></script>
+    <script src="forth_sec.js"></script>
+
+</body>
+
+</html>

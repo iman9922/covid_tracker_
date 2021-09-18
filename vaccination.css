@@ -1,0 +1,42 @@
+.thirdSection {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    color: white;
+    margin-top: 40px;
+    direction: ltr;
+}
+
+.continent {
+    width: 14%;
+    background-color: #1e1e1e;
+    border-top: 5px solid GRAY;
+    text-align: center;
+}
+
+.thirdSection h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title_vaccination_regions {
+    font-size: 24px Roboto, sans-serif;
+    width: 80%;
+    height: fit-content;
+    margin-right: 5%;
+    color: white;
+}
+
+.continent span {
+    color: #bcbcbc
+}
+
+#all_vaccinated {
+    color: #00bf4a;
+}
+
+#all_pop {
+    color: #3b81f7;
+}
