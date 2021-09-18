@@ -18,8 +18,12 @@
 
 
     <header>
-        <h1 id="country_name"></h1>
-        <h3> POPULATION<span><span id="country_num_pop"></span></span>
+        <div id="header_title">
+            <img id="country_image">
+            <h1 id="country_name"></h1>
+        </div>
+
+        <h3> POPULATION : <span><span></span><span id="country_num_pop"></span></span>
         </h3>
     </header>
     <section class="firstSection">
@@ -32,7 +36,7 @@
             <h3>Linear</h3>
 
             <div class="chart_legend">
-                <button class="items" id="total"></button> Total cases <button class="items " id="recovered"></button>Recovered <button class="items " id="deaths"></button>Deaths
+                <button class="items" id="total" onclick="toggleData(0)"></button> Total cases <button class="items " id="recovered" onclick="toggleData(0)"></button>Recovered <button class="items " id="deaths" onclick="toggleData(0)"></button>Deaths
             </div>
         </div>
 

@@ -108,6 +108,9 @@ let myChart = new Chart(ctx, {
                         if (valueLegendReq.length === 8) {
                             return valueLegendReq.substr(0, 2) + 'M';
                         }
+                        if (valueLegendReq.length === 7) {
+                            return valueLegendReq.substr(0, 1) + 'M';
+                        }
                         if (valueLegendReq.length === 9) {
                             return valueLegendReq.substr(0, 3) + 'M';
                         }
