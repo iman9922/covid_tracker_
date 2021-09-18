@@ -131,10 +131,19 @@ footer {
 }
 
 footer i {
-    color: rgb(246, 250, 253);
-    width: 50px;
+    color: gray;
+    width: 35px;
     margin-top: 5%;
     padding-right: 0%;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#left_i:hover,
+#right_i:hover {
+    color: white;
+    background-color: #413f3f;
+    border-radius: 50%;
 }
 
 .footer_content {

@@ -17,7 +17,7 @@ function getCountries() {
         )
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
+            //console.log(data)
             header_number.innerHTML = `${data.length-1}`
             information = data[0];
             active = information.active;

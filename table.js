@@ -1,5 +1,6 @@
 let number = 10;
 const table = document.querySelector("table");
+let start_point = 0;
 
 let myTableTH = table.innerHTML;
 let selecting = document.querySelector(".select");
@@ -17,22 +18,30 @@ function getting_numbers() {
         } else if (selecting.value == 50) {
             number = selecting.value;
         }
-
+        start_point = 0;
         table_information(number)
 
 
     })
 }
-//*********************************************** */
-/*const footer_content = document.getElementById("footer_content");
-const options = footer_content.getElementsByClassName("vals");
-for (let i = 0; i < options.length; i++) {
-    options[i].addEventListener("click", function() {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}*/
+
+function handleControle(data, filteredCountries) {
+    let left_i = document.getElementById('left_i');
+    left_i.addEventListener("click", function(event) {
+        if (start_point > number - 1) {
+            start_point -= number - 1;
+            listItems(data, filteredCountries);
+        }
+    })
+    let right_i = document.getElementById('right_i');
+    right_i.addEventListener("click", function(event) {
+        if (start_point < filteredCountries.length) {
+            start_point += number - 1;
+            listItems(data, filteredCountries);
+        }
+
+    })
+}
 getting_numbers()
 
 function table_information(number) {
@@ -59,7 +68,7 @@ function listItems(data, filteredCountries, num = number) {
     const [vaccination, cases] = data;
     const countries = filteredCountries;
     table.innerHTML = myTableTH;
-    for (let i = 0; i < num; i++) {
+    for (let i = start_point; i < start_point + number; i++) {
         const { abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population } = vaccination[countries[i]].All;
         const { confirmed, deaths } = cases[countries[i]].All;
         const valid_data = [abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population, confirmed, deaths].map(info => info ? info : "-")
@@ -100,14 +109,17 @@ table_information(number)
 
 function searching_function(countries, data) {
     let input, filter;
+    let filteredCountries = countries;
     input = document.getElementById('myInput');
     input.addEventListener("keyup", () => {
         filter = input.value.toUpperCase();
         if (filter === "") {
-            listItems(data, countries)
+            filteredCountries = countries;
         } else {
-            listItems(data, countries.filter((country) => country.toUpperCase().includes(filter)))
-        }
+            filteredCountries = countries.filter((country) => country.toUpperCase().includes(filter));
 
+        }
+        listItems(data, filteredCountries)
     })
+    handleControle(data, filteredCountries);
 }
