@@ -99,7 +99,7 @@ function table_data(abbreviation, administered, country, people_partially_vaccin
     
    
 <tr class="table_rows" onclick="goSite('${country}')">
-<td><img class="flags"src="https://lipis.github.io/flag-icon-css/flags/4x3/${abbreviation.toLowerCase()}.svg"><span class="country_name">${country}</span></td>
+<td class="td-start"><img class="flags"src="https://lipis.github.io/flag-icon-css/flags/4x3/${abbreviation.toLowerCase()}.svg"><span class="country_name">${country}</span></td>
 <td>${population.toLocaleString()}</td>
 <td>${confirmed.toLocaleString()}</td>
 <td>${RECOVERD}</td>
