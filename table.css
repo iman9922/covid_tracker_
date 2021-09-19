@@ -81,14 +81,20 @@ table {
     border: none;
     background-color: #1E1E1E;
     border-spacing: 0;
-    width: 90%;
-    min-width: none !important;
-    margin: 0 auto;
+    width: 100%;
     font-size: 0.9rem;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-
+.lastSection{
+    width: 90vw;
+    margin: 0 auto;
+}
+@media (max-width:768px) {
+    .lastSection{
+        width: vw;
+    }
+}
 th.table_th:hover {
     color: white;
 }
@@ -145,13 +151,12 @@ th {
 
 /*....................................................................*/
 
-footer {
+.footer {
     display: flex;
     align-items: center;
     justify-content: right;
     overflow: hidden;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     text-align: right;
     background-color: #1E1E1E;
     color: rgb(246, 250, 253);
@@ -159,7 +164,7 @@ footer {
     border-bottom-right-radius: 4px;
 }
 
-footer i {
+.footer i {
     color: gray;
     width: 35px;
     margin-top: 5%;
@@ -180,7 +185,7 @@ footer i {
     align-items: baseline;
 }
 
-footer select {
+.footer select {
     width: 12%;
     outline: none !important;
     padding-left: 10px;
