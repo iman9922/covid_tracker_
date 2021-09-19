@@ -11,7 +11,7 @@
 .continent {
     width: 14%;
     background-color: #1e1e1e;
-    border-top: 5px solid GRAY;
+    border-top: 5px solid #00bf4a;
     text-align: center;
 }
 
@@ -38,5 +38,55 @@
 }
 
 #all_pop {
-    color: #3b81f7;
+    color: red;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .thirdSection {
+        display: flex;
+        background-color: pink;
+        justify-content: space-around;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    .continent {
+        width: 99%;
+    }
+    .thirdSection h1 {
+        font-size: 40px;
+    }
+    .thirdSection p {
+        font-size: 30px;
+    }
+}
+
+@media (min-width:481px) and (max-width:798px) {
+    .thirdSection {
+        display: flex;
+        background-color: yellow;
+        justify-content: space-around;
+        flex-flow: column wrap;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .continent {
+        width: 90%;
+    }
+    .thirdSection h1 {
+        font-size: 40px;
+    }
+    .thirdSection p {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:1200px) {
+    .thirdSection {
+        display: flex;
+        background-color: red;
+    }
+    .continent {
+        width: 40%;
+        margin-bottom: 2%;
+    }
 }

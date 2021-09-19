@@ -108,6 +108,14 @@ h4 {
     margin-left: 14px;
 }
 
+@media (min-width:320px) and (max-width:480px) {}
+
+@media (min-width:481px) and (max-width:798px) {}
+
+@media (min-width: 1025px) and (max-width:1200px) {}
+
+@media (min-width:1201px) {}
+
 @media(max-width:767px) {
     .totalCases,
     .activeCases,
@@ -213,7 +221,7 @@ body {
 .green-dot {
     height: 25px;
     width: 25px;
-    background-color: #bbb;
+    background-color: #00bf4a;
     border-radius: 50%;
     display: inline-block;
     margin-left: 3%;
