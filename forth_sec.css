@@ -59,3 +59,11 @@
     margin-right: 3%;
     font-size: xx-large;
 }
+
+@media (min-width:320px) and (max-width:480px) {}
+
+@media (min-width:481px) and (max-width:798px) {}
+
+@media (min-width: 1025px) and (max-width:1200px) {}
+
+@media (min-width:1201px) {}

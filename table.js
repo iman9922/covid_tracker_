@@ -25,20 +25,20 @@ function getting_numbers() {
 }
 
 function handleControle(data, filteredCountries) {
-    handleControle = function(){};
+    handleControle = function() {};
     let left_i = document.getElementById('left_i');
     let endEd = false;
     left_i.addEventListener("click", function(event) {
         if (start_point >= number) {
             start_point -= number;
-            endEd =listItems(data, filteredCountries);
+            endEd = listItems(data, filteredCountries);
         }
     })
     let right_i = document.getElementById('right_i');
     right_i.addEventListener("click", function(event) {
-        if(!endEd) {
+        if (!endEd) {
             start_point += number;
-            endEd =listItems(data, filteredCountries);
+            endEd = listItems(data, filteredCountries);
         }
 
     })
@@ -70,22 +70,22 @@ function listItems(data, filteredCountries, num = number) {
     const countries = [].concat(filteredCountries);
     table.innerHTML = myTableTH;
     let i = start_point;
-        while((i < (start_point + num)) && (i < countries.length-1)) {
-            try{
-                const { abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population } = vaccination[countries[i]].All;
-                const { confirmed, deaths } = cases[countries[i]].All;
-                const valid_data = [abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population, confirmed, deaths].map(info => info ? info : "-")
-                table_data(...valid_data);
-                
-            }catch(e){
-                console.log(e);
-            }
-            i++;
-            // searching_function(searching_data)
+    while ((i < (start_point + num)) && (i < countries.length - 1)) {
+        try {
+            const { abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population } = vaccination[countries[i]].All;
+            const { confirmed, deaths } = cases[countries[i]].All;
+            const valid_data = [abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population, confirmed, deaths].map(info => info ? info : "-")
+            table_data(...valid_data);
+
+        } catch (e) {
+            console.log(e);
         }
-        show_nums.innerHTML = `${start_point+1}-${i}`;
-        return i >= countries.length -1
-    
+        i++;
+        // searching_function(searching_data)
+    }
+    show_nums.innerHTML = `${start_point+1}-${i}`;
+    return i >= countries.length - 1
+
 }
 let RECOVERD = [];
 let DEATH_MILION = [];
@@ -102,9 +102,9 @@ function table_data(abbreviation, administered, country, people_partially_vaccin
 <td class="td-start"><img class="flags"src="https://lipis.github.io/flag-icon-css/flags/4x3/${abbreviation.toLowerCase()}.svg"><span class="country_name">${country}</span></td>
 <td>${population.toLocaleString()}</td>
 <td>${confirmed.toLocaleString()}</td>
-<td>${RECOVERD}</td>
+<td> ${parseFloat(100*confirmed/population).toFixed(2)}% from population</td>
 <td>${deaths}</td>
-<td>${DEATH_MILION }</td>
+<td>${parseFloat(100*deaths/confirmed).toFixed(2)}% from cases</td>
 <td>${administered.toLocaleString()}</td>
 <td>${people_partially_vaccinated.toLocaleString() }</td>
 <td>${people_vaccinated.toLocaleString()}</td>
