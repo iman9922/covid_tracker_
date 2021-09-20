@@ -5,7 +5,7 @@
     width: 100%;
     color: white;
     margin-top: 40px;
-    direction: ltr;
+    margin-bottom: 4%;
 }
 
 .continent {
@@ -39,54 +39,4 @@
 
 #all_pop {
     color: red;
-}
-
-@media (min-width:320px) and (max-width:480px) {
-    .thirdSection {
-        display: flex;
-        background-color: pink;
-        justify-content: space-around;
-        flex-flow: column wrap;
-        width: 100%;
-    }
-    .continent {
-        width: 99%;
-    }
-    .thirdSection h1 {
-        font-size: 40px;
-    }
-    .thirdSection p {
-        font-size: 30px;
-    }
-}
-
-@media (min-width:481px) and (max-width:798px) {
-    .thirdSection {
-        display: flex;
-        background-color: yellow;
-        justify-content: space-around;
-        flex-flow: column wrap;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .continent {
-        width: 90%;
-    }
-    .thirdSection h1 {
-        font-size: 40px;
-    }
-    .thirdSection p {
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width:1200px) {
-    .thirdSection {
-        display: flex;
-        background-color: red;
-    }
-    .continent {
-        width: 40%;
-        margin-bottom: 2%;
-    }
 }

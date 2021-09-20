@@ -122,13 +122,33 @@ let myChart = new Chart(ctx, {
                         if (valueLegendReq.length === 1) {
                             return valueLegendReq;
                         }
+                        if (valueLegendReq.length === 2) {
+                            return valueLegendReq;
+                        }
+                        if (valueLegendReq.length === 3) {
+                            return valueLegendReq;
+                        }
+                        if (valueLegendReq.length === 4) {
+                            return valueLegendReq.substr(0, 2) + 'k';
+                        }
+                        if (valueLegendReq.length === 5) {
+                            return valueLegendReq.substr(0, 2) + 'k';
+                        }
                         if (valueLegendReq.length === 6) {
-                            return valueLegendReq.substr(0, 1) + 'M';
-
+                            return valueLegendReq.substr(0, 3) + 'k';
                         }
 
+                        if (valueLegendReq.length === 8) {
+                            return valueLegendReq.substr(0, 2) + 'M';
+                        }
                         if (valueLegendReq.length === 7) {
                             return valueLegendReq.substr(0, 1) + 'M';
+                        }
+                        if (valueLegendReq.length === 9) {
+                            return valueLegendReq.substr(0, 3) + 'M';
+                        }
+                        if (valueLegendReq.length === 10) {
+                            return valueLegendReq.substr(0, 4) + 'M';
                         }
                     }
                 }

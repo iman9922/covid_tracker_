@@ -1,0 +1,113 @@
+                @media (min-width:200px) and (max-width:319px) {
+                    .thirdSection {
+                        display: flex;
+                        flex-flow: column wrap;
+                    }
+                    .continent {
+                        width: 85%;
+                    }
+                    .thirdSection h1 {
+                        font-size: 15px;
+                    }
+                    .thirdSection p {
+                        font-size: 10px;
+                    }
+                }
+                
+                @media (min-width:320px) and (max-width:480px) {
+                    .thirdSection {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-flow: column wrap;
+                        width: 100%;
+                    }
+                    .continent {
+                        width: 99%;
+                    }
+                    .thirdSection h1 {
+                        font-size: 30px;
+                    }
+                    .thirdSection p {
+                        font-size: 20px;
+                    }
+                }
+                
+                @media (min-width:481px) and (max-width:798px) {
+                    .thirdSection {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-flow: row wrap;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                    .continent {
+                        width: 40%;
+                    }
+                    .thirdSection h1 {
+                        font-size: 30px;
+                    }
+                    .thirdSection p {
+                        font-size: 20px;
+                    }
+                }
+                
+                @media (min-width: 799px) and (max-width:1024px) {
+                    .thirdSection {
+                        flex-flow: row wrap;
+                    }
+                    .continent {
+                        width: 30%;
+                        margin-bottom: 10%;
+                    }
+                }
+                
+                @media (min-width: 1025px) and (max-width:1200px) {
+                    .thirdSection {
+                        display: flex;
+                    }
+                    .continent {
+                        width: 40%;
+                        margin-bottom: 2%;
+                    }
+                }
+                
+                @media (min-width:320px) and (max-width:480px) {
+                    .span1,
+                    .span2,
+                    .span5,
+                    .span6,
+                    .span4,
+                    .span3 {
+                        font-size: 15px;
+                    }
+                }
+                
+                @media(max-width:767px) {
+                    .totalCases,
+                    .activeCases,
+                    .recovered,
+                    .deaths {
+                        width: 40%;
+                    }
+                    .recovered,
+                    .deaths {
+                        margin-top: 5%;
+                    }
+                    .continent {
+                        width: 40%;
+                        margin: 0 auto;
+                        margin-top: 5%;
+                    }
+                    .first_country,
+                    .second_country,
+                    .third_country,
+                    .forth_country {
+                        width: 40%;
+                        margin: 0 auto;
+                        margin-top: 5%;
+                        border-radius: 4px;
+                    }
+                    hr {
+                        margin-top: 90%;
+                    }
+                }

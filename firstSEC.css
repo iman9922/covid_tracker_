@@ -1,6 +1,8 @@
-body{
-    margin:0;
-    font-family: 'Roboto', sans-serif;}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 header h1 {
     text-align: center;
     color: white;
@@ -109,108 +111,6 @@ h4 {
 
 .cases {
     margin-left: 14px;
-}
-
-@media (min-width:320px) and (max-width:480px) {}
-
-@media (min-width:481px) and (max-width:798px) {}
-
-@media (min-width: 1025px) and (max-width:1200px) {}
-
-@media (min-width:1201px) {}
-
-@media(max-width:767px) {
-    .totalCases,
-    .activeCases,
-    .recovered,
-    .deaths {
-        width: 40%;
-    }
-    .recovered,
-    .deaths {
-        margin-top: 5%;
-    }
-    .continent {
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    .first_country,
-    .second_country,
-    .third_country,
-    .forth_country {
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 5%;
-        border-radius: 4px;
-    }
-    hr {
-        margin-top: 90%;
-    }
-}
-
-@media (min-width:768px) and (max-width:991px) {
-    .totalCases,
-    .activeCases,
-    .recovered,
-    .deaths {
-        width: 40%;
-    }
-    .recovered,
-    .deaths {
-        margin-top: 5%;
-    }
-    .continent {
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    .first_country,
-    .second_country,
-    .third_country,
-    .forth_country {
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    hr {
-        margin-top: 90%;
-    }
-}
-
-hr {
-    margin: 0 auto;
-    margin-top: 3%;
-    width: 90%;
-}
-
-@media(min-width:1200px) {
-    .totalCases,
-    .activeCases,
-    .recovered,
-    .deaths {
-        width: 40%;
-    }
-    .recovered,
-    .deaths {
-        margin-top: 5%;
-    }
-    .continent {
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    .first_country,
-    .second_country,
-    .third_country,
-    .forth_country {
-        width: 18%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    hr {
-        scroll-margin-bottom: 5%;
-    }
 }
 
 

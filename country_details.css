@@ -201,10 +201,29 @@ header {
     flex-flow: column;
 }
 
-@media (min-width:320px) and (max-width:480px) {}
+@media (min-width:320px) and (max-width:480px) {
+    .span1,
+    .span2,
+    .span5,
+    .span6,
+    .span4,
+    .span3 {
+        font-size: 15px;
+    }
+}
 
-@media (min-width:481px) and (max-width:798px) {}
-
-@media (min-width: 1025px) and (max-width:1200px) {}
-
-@media (min-width:1201px) {}
+@media(max-width:767px) {
+    .totalCases,
+    .activeCases,
+    .recovered,
+    .deaths {
+        width: 40%;
+    }
+    .recovered,
+    .deaths {
+        margin-top: 5%;
+    }
+    hr {
+        margin-top: 90%;
+    }
+}
