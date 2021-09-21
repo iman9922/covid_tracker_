@@ -134,3 +134,15 @@ function searching_function(countries, data) {
     })
     handleControle(data, filteredCountries);
 }
+
+//const btns = document.getElementsByClassName(".vals")
+let select = document.getElementById("selected");
+
+let btns = document.getElementsByClassName(".option");
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("change", function() {
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}

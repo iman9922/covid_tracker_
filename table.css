@@ -185,20 +185,36 @@ th {
 .footer_content {
     display: flex;
     align-items: baseline;
+    flex-flow: row wrap;
+    width: 50%;
+    padding-left: 50%;
+    padding-bottom: 3%;
 }
 
 .footer select {
     width: 12%;
-    outline: none !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    outline: none;
     background-color: #1E1E1E;
-    height: 80%;
     margin: 0 auto;
     position: relative;
     color: aliceblue;
     border: none;
     text-decoration: none;
+    border: 0px;
+    outline: 0px;
+    border-bottom: 1px solid white !important;
+    padding-bottom: 3px;
+}
+
+.footer select:active {
+    caret-color: #3584c4;
+    color: #3884c2;
+    outline: none;
+}
+
+.vals {
+    border: 0px !important;
+    outline: 0px !important;
 }
 
 .developers {

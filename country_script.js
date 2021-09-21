@@ -12,7 +12,6 @@ function confirmed_data() {
         for (let i = 0; i <= 29; i++) {
             confirmed_cases.push(Object.values(data.All.dates)[i]); // console.log(confirmed_cases[i]);
             lasted_confirmed = confirmed_cases[i];
-            // console.log(lasted_confirmed)
         }
     });
 
@@ -50,7 +49,7 @@ function death_data() {
 
         country_num_pop.innerHTML = `${data.All.population.toLocaleString()}`;
         let abbreviation = data.All.abbreviation;
-        console.log(abbreviation)
+        //console.log(abbreviation)
         country_image.src = `https://lipis.github.io/flag-icon-css/flags/4x3/${abbreviation.toLowerCase()}.svg`
             // console.log(data.All.population)
         for (let i = 0; i <= 29; i++) {
@@ -177,10 +176,6 @@ document.getElementById('total').style.backgroundColor = myChart.data.datasets[0
 document.getElementById('recovered').style.backgroundColor = myChart.data.datasets[1].borderColor;
 document.getElementById('deaths').style.backgroundColor = myChart.data.datasets[2].borderColor;
 
-
-
-
-
 let active = 0;
 let deaths = 0;
 let recovered = 0;
@@ -190,8 +185,6 @@ let casesPerOneMillion = 0;
 let critical = 0;
 let population = 0;
 
-
-
 function getCountries() {
     fetch(`https://coronavirus-19-api.herokuapp.com/countries/${country}`)
         .then((res) => res.json())
@@ -200,19 +193,72 @@ function getCountries() {
 
 
             active = data.active;
-            console.log(data);
+
             deaths = data.deaths;
             recovered = data.recovered;
             totalcases = data.cases;
             deathsPerOneMillion = data.deathsPerOneMillion;
             casesPerOneMillion = data.casesPerOneMillion;
             critical = data.critical;
-            console.log(active, totalcases, deaths, recovered);
+
             renderAffectedCountries(data);
+
+
 
         });
 }
 getCountries();
+
+//------------------------------------------------------------------------------------------//
+let capital = document.getElementById("capital")
+
+function country_vaccine_details(administered, partiallyVaccinated, vaccinated, population, capital_city) {
+    document.querySelector(".thirdSection").insertAdjacentHTML("afterbegin", `
+    <div class="country">
+        <h1>Vaccination Details</h1>
+       
+        <p>
+            POPULATION:<br>
+            <span id="all_pop">${population.toLocaleString()}</span>
+        </p>
+        <p>
+        Vaccine Registrated:
+            <span>${administered.toLocaleString()}</span>
+        </p>
+        <p>
+             Partially Vaccinated:
+            <span>${partiallyVaccinated.toLocaleString()}<br><br><span id="vaccinated_percentage">${parseInt(100*vaccinated/population)}   % of  Total   Population  </span>
+        </p>
+        <p>
+            Total Vaccinated:
+           <span>${vaccinated.toLocaleString()}<br><br><span id="vaccinated_percentage">${parseInt(100*partiallyVaccinated/population)}   % of  Total   Population</span></span>
+        </p>
+    </div>
+    `)
+    capital.innerHTML = `${capital_city}`
+}
+
+
+
+
+fetch(`https://covid-api.mmediagroup.fr/v1/vaccines?country=${country}`).then(response => response.json()).then(data => {
+
+
+        let capital_city = '';
+        let administered = 0;
+        let partiallyVaccinated = 0;
+        let vaccinated = 0;
+        let population = 0;
+        administered = data.All.administered;
+        partiallyVaccinated = data.All.people_partially_vaccinated;
+        vaccinated = data.All.people_vaccinated;
+        population = data.All.population;
+        capital_city = data.All.capital_city;
+        console.log(data.All.capital_city)
+
+        country_vaccine_details(administered, partiallyVaccinated, vaccinated, population, capital_city)
+    })
+    //----------------------------------------------------------------
 
 async function renderAffectedCountries() {
     document.querySelector(".firstSection").innerHTML = `<div class="totalCases">
