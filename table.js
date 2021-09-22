@@ -114,7 +114,9 @@ function table_data(abbreviation, administered, country, people_partially_vaccin
 }
 
 function goSite(country) {
-    window.location.href = window.location.origin + '/country_details.html?country=' + country;
+    list = window.location.href.split("/")
+    list[list.length -1] = 'country_details.html?country=' + country;
+    window.location.href = list.join('/')
 }
 table_information(number)
 
