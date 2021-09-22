@@ -70,7 +70,7 @@ function listItems(data, filteredCountries, num = number) {
     const countries = [].concat(filteredCountries);
     table.innerHTML = myTableTH;
     let i = start_point;
-    while ((i < (start_point + num)) && (i < countries.length - 1)) {
+    while ((i < (start_point + num)) && (i < countries.length)){
         try {
             const { abbreviation, administered, country, people_partially_vaccinated, people_vaccinated, population } = vaccination[countries[i]].All;
             const { confirmed, deaths } = cases[countries[i]].All;
@@ -82,9 +82,9 @@ function listItems(data, filteredCountries, num = number) {
         }
         i++;
         // searching_function(searching_data)
-    }
+    } 
     show_nums.innerHTML = `${start_point+1}-${i}`;
-    return i >= countries.length - 1
+    return i >= countries.length
 
 }
 let RECOVERD = [];
@@ -123,12 +123,12 @@ function searching_function(countries, data) {
     let filteredCountries = countries;
     input = document.getElementById('myInput');
     input.addEventListener("keyup", () => {
+        start_point = 0;
         filter = input.value.toUpperCase();
         if (filter === "") {
             filteredCountries = countries;
         } else {
             filteredCountries = countries.filter((country) => country.toUpperCase().includes(filter));
-
         }
         listItems(data, filteredCountries)
     })
@@ -136,13 +136,13 @@ function searching_function(countries, data) {
 }
 
 //const btns = document.getElementsByClassName(".vals")
-let select = document.getElementById("selected");
+// let select = document.getElementById("selected");
 
-let btns = document.getElementsByClassName(".option");
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("change", function() {
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
+// let btns = document.getElementsByClassName(".option");
+// for (let i = 0; i < btns.length; i++) {
+//     btns[i].addEventListener("change", function() {
+//         let current = document.getElementsByClassName("active");
+//         current[0].className = current[0].className.replace(" active", "");
+//         this.className += " active";
+//     });
+// }
